@@ -1,7 +1,7 @@
 ---
 swagger: "2.0"
 info:
-  version: "1.0"
+  version: "1.0.0"
   title: "Food App Project"
   contact: {}
 host: "admin-food-backend.herokuapp.com"
@@ -11,7 +11,7 @@ tags:
 - name: "Categories"
 - name: "Tags"
 schemes:
-- "http"
+- "https"
 consumes:
 - "application/json"
 produces:
@@ -26,11 +26,11 @@ paths:
       produces:
       - "application/json"
       parameters: []
-      deprecated: false
       responses:
         "200":
           description: ""
           headers: {}
+      deprecated: false
       x-swagger-router-controller: "Product"
     post:
       tags:
@@ -73,11 +73,11 @@ paths:
         description: ""
         required: true
         type: "string"
-      deprecated: false
       responses:
         "200":
           description: ""
           headers: {}
+      deprecated: false
       x-swagger-router-controller: "Product"
   /products/{product_id}:
     put:
@@ -126,11 +126,11 @@ paths:
         description: ""
         required: true
         type: "string"
-      deprecated: false
       responses:
         "200":
           description: ""
           headers: {}
+      deprecated: false
       x-swagger-router-controller: "Product"
     delete:
       tags:
@@ -145,11 +145,11 @@ paths:
         description: ""
         required: true
         type: "string"
-      deprecated: false
       responses:
         "200":
           description: ""
           headers: {}
+      deprecated: false
       x-swagger-router-controller: "Product"
   /categories:
     get:
@@ -160,11 +160,11 @@ paths:
       produces:
       - "application/json"
       parameters: []
-      deprecated: false
       responses:
         "200":
           description: ""
           headers: {}
+      deprecated: false
       x-swagger-router-controller: "Categories"
     post:
       tags:
@@ -181,11 +181,11 @@ paths:
         description: ""
         required: true
         type: "string"
-      deprecated: false
       responses:
         "200":
           description: ""
           headers: {}
+      deprecated: false
       x-swagger-router-controller: "Categories"
   /categories/{category_id}:
     put:
@@ -208,11 +208,11 @@ paths:
         description: ""
         required: true
         type: "string"
-      deprecated: false
       responses:
         "200":
           description: ""
           headers: {}
+      deprecated: false
       x-swagger-router-controller: "Categories"
     delete:
       tags:
@@ -227,11 +227,11 @@ paths:
         description: ""
         required: true
         type: "string"
-      deprecated: false
       responses:
         "200":
           description: ""
           headers: {}
+      deprecated: false
       x-swagger-router-controller: "Categories"
   /tags:
     get:
@@ -242,11 +242,11 @@ paths:
       produces:
       - "application/json"
       parameters: []
-      deprecated: false
       responses:
         "200":
           description: ""
           headers: {}
+      deprecated: false
       x-swagger-router-controller: "Tags"
     post:
       tags:
@@ -263,11 +263,11 @@ paths:
         description: ""
         required: true
         type: "string"
-      deprecated: false
       responses:
         "200":
           description: ""
           headers: {}
+      deprecated: false
       x-swagger-router-controller: "Tags"
   /tags/61664d4f836127d133cc3714:
     put:
@@ -285,11 +285,11 @@ paths:
         description: ""
         required: true
         type: "string"
-      deprecated: false
       responses:
         "200":
           description: ""
           headers: {}
+      deprecated: false
       x-swagger-router-controller: "Tags"
   /tags/{tag_id}:
     delete:
@@ -305,9 +305,9 @@ paths:
         description: ""
         required: true
         type: "string"
-      deprecated: false
       responses:
         "200":
           description: ""
           headers: {}
+      deprecated: false
       x-swagger-router-controller: "Tags"
