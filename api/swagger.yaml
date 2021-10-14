@@ -1,0 +1,313 @@
+---
+swagger: "2.0"
+info:
+  version: "1.0"
+  title: "Food App Project"
+  contact: {}
+host: "example.com"
+basePath: "/api"
+tags:
+- name: "Product"
+- name: "Categories"
+- name: "Tags"
+schemes:
+- "http"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+paths:
+  /products:
+    get:
+      tags:
+      - "Product"
+      summary: "Get Product"
+      operationId: "GetProduct"
+      produces:
+      - "application/json"
+      parameters: []
+      deprecated: false
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      x-swagger-router-controller: "Product"
+    post:
+      tags:
+      - "Product"
+      summary: "Add Product"
+      operationId: "AddProduct"
+      consumes:
+      - "application/x-www-form-urlencoded"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "name"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+      - name: "description"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+      - name: "price"
+        in: "formData"
+        description: ""
+        required: true
+        type: "integer"
+        format: "int32"
+      - name: "image"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+      - name: "category"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+      - name: "tags"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+      deprecated: false
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      x-swagger-router-controller: "Product"
+  /products/{product_id}:
+    put:
+      tags:
+      - "Product"
+      summary: "Edit Product"
+      operationId: "EditProduct"
+      consumes:
+      - "application/x-www-form-urlencoded"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "name"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+      - name: "description"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+      - name: "price"
+        in: "formData"
+        description: ""
+        required: true
+        type: "integer"
+        format: "int32"
+      - name: "image"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+      - name: "category"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+      - name: "tags"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+      - name: "product_id"
+        in: "path"
+        description: ""
+        required: true
+        type: "string"
+      deprecated: false
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      x-swagger-router-controller: "Product"
+    delete:
+      tags:
+      - "Product"
+      summary: "Delete Product"
+      operationId: "DeleteProduct"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "product_id"
+        in: "path"
+        description: ""
+        required: true
+        type: "string"
+      deprecated: false
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      x-swagger-router-controller: "Product"
+  /categories:
+    get:
+      tags:
+      - "Categories"
+      summary: "Get Category"
+      operationId: "GetCategory"
+      produces:
+      - "application/json"
+      parameters: []
+      deprecated: false
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      x-swagger-router-controller: "Categories"
+    post:
+      tags:
+      - "Categories"
+      summary: "Add Category"
+      operationId: "AddCategory"
+      consumes:
+      - "application/x-www-form-urlencoded"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "name"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+      deprecated: false
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      x-swagger-router-controller: "Categories"
+  /categories/{category_id}:
+    put:
+      tags:
+      - "Categories"
+      summary: "Edit Category"
+      operationId: "EditCategory"
+      consumes:
+      - "application/x-www-form-urlencoded"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "name"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+      - name: "category_id"
+        in: "path"
+        description: ""
+        required: true
+        type: "string"
+      deprecated: false
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      x-swagger-router-controller: "Categories"
+    delete:
+      tags:
+      - "Categories"
+      summary: "Delete Category"
+      operationId: "DeleteCategory"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "category_id"
+        in: "path"
+        description: ""
+        required: true
+        type: "string"
+      deprecated: false
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      x-swagger-router-controller: "Categories"
+  /tags:
+    get:
+      tags:
+      - "Tags"
+      summary: "Get tag"
+      operationId: "Gettag"
+      produces:
+      - "application/json"
+      parameters: []
+      deprecated: false
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      x-swagger-router-controller: "Tags"
+    post:
+      tags:
+      - "Tags"
+      summary: "Add Tag"
+      operationId: "AddTag"
+      consumes:
+      - "application/x-www-form-urlencoded"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "name"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+      deprecated: false
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      x-swagger-router-controller: "Tags"
+  /tags/61664d4f836127d133cc3714:
+    put:
+      tags:
+      - "Tags"
+      summary: "Edit Tag"
+      operationId: "EditTag"
+      consumes:
+      - "application/x-www-form-urlencoded"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "name"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+      deprecated: false
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      x-swagger-router-controller: "Tags"
+  /tags/{tag_id}:
+    delete:
+      tags:
+      - "Tags"
+      summary: "Delete Tag"
+      operationId: "DeleteTag"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "tag_id"
+        in: "path"
+        description: ""
+        required: true
+        type: "string"
+      deprecated: false
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      x-swagger-router-controller: "Tags"
